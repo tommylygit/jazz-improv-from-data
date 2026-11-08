@@ -2,3 +2,4 @@ data/*.db
 *Zone.Identifier
 __pycache__/
 .venv/
+*.pdf
