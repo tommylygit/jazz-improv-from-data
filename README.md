@@ -22,9 +22,10 @@ A side question: **do pianists improvise like horn players?** Most transcribed s
 
 ## Roadmap
 
+## Roadmap
+
 | Phase | Content | Concepts |
 | --- | --- | --- |
-
 | 0. Data & representation | Align each note with its chord, encode it as an interval above the chord root | SQL, pandas, time alignment, music theory |
 | 1. Analysis | How soloists choose notes by chord and beat; pianists vs. horn players | Conditional probability, chance baselines, note classification |
 | 2. Generation | Lines over the chord progression of a Real Book standard with a chord-conditioned Markov chain, exported to MIDI | Markov chains as weighted graphs, sampling, evaluation against real solos |
