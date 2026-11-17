@@ -20,7 +20,25 @@ A side question: **do pianists improvise like horn players?** Most transcribed s
 - [Jazz Trio Database](https://transactions.ismir.net/articles/186): 1,294 piano solos transcribed to MIDI, without chord labels, for the piano vs. horns comparison.
 - The Real Book (jazz standards lead sheets), recommended by my professor Brian Dolan : chord progressions of standards used as practice material for generation and feedback (not redistributed here).
 
-## Roadmap
+
+## First results (phases 0–1)
+
+![Interval profile over dominant 7 chords](figures/dominant7_interval_profile.png)
+
+Each note of 456 solos is matched to the chord sounding at that moment and encoded as an interval above the chord root: `interval = (pitch - root) mod 12`.
+
+| Measure | Value |
+| --- | --- |
+| Notes that are chord tones | 49.1%, vs **32.5%** if notes were chosen at random |
+| Chord tones on strong beats (1 and 3) | 51.2% |
+| Chord tones off the beat | 48.1% |
+| Non-chord tones resolving by a half step onto a chord tone | 19.3% |
+
+- Soloists clearly target chord tones, about 1.5× more than chance.
+- The textbook rule "chord tones on strong beats" is weaker than expected: only about 3 points between strong beats and off-beats.
+- Over dominant chords, the 9th and 13th appear about as often as chance, roughly twice as often as other tensions (b9, #11, b13): they behave like core vocabulary, not "wrong notes".
+- About 1 in 5 non-chord tones is a chromatic approach note.
+- Limitation: only 3 piano solos have usable chord labels, so the piano vs. horns comparison needs the Jazz Trio Database (next step).
 
 ## Roadmap
 
@@ -34,4 +52,4 @@ A side question: **do pianists improvise like horn players?** Most transcribed s
 
 ## Status
 
-Project setup done. **Phase 0, 1 and 2 starts this week.**
+Phases 0–1 done. Next: piano vs. horns comparison and Markov-chain generator.
